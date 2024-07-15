@@ -1,0 +1,50 @@
+package controller;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+@WebServlet("/Update")
+public class Update extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	
+		try(PrintWriter out = response.getWriter())
+		{
+			String idVal = req
+			String name = request.getParameter("uname");
+			String pass = request.getParameter("pw");
+			String mobile = request.getParameter("mn");
+			
+			Class.forName("com.mysql.jdbc.Driver");  
+			Connection con=DriverManager.getConnection(  
+			"jdbc:mysql://localhost:3306/users","root","80155");  
+			java.sql.Statement stmt=con.createStatement();
+			
+			int val = stmt.executeUpdate("update userDetails set username='"+name+"',password='"+pass+"', MobileNumber='"+mobile+"' where id='"+id+"' ");
+
+			if(val == 1)
+			{
+				out.print("Details Inserted Successfully");
+			}
+			else {
+				out.print("Sorry");
+
+			}
+		}catch(Exception e)
+		{
+			System.out.print(e);
+		}
+	
+	}
+
+}

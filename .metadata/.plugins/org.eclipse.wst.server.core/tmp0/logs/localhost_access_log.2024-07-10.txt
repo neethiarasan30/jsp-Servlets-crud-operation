@@ -1,0 +1,2 @@
+0:0:0:0:0:0:0:1 - - [10/Jul/2024:00:00:40 +0530] "GET /JavaFullStack/ HTTP/1.1" 200 1096
+0:0:0:0:0:0:0:1 - - [10/Jul/2024:00:00:47 +0530] "GET /JavaFullStack/myFirstServlet? HTTP/1.1" 200 25

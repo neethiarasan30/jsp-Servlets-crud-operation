@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+
+<style>
+		a{
+		}
+</style>
+
+<body>
+		
+		<div>
+		<a href="Login.html">Login</a>
+		<a href="Register.html">Register</a>	
+		</div>
+</body>
+</html>
+
